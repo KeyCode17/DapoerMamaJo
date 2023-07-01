@@ -5,7 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-    --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
@@ -11519,4 +11518,3 @@ fieldset:disabled .btn {
         display: none !important;
     }
 }
-/*# sourceMappingURL=bootstrap.min.css.map */
