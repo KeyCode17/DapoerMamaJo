@@ -19,7 +19,7 @@ class DashboardCategoryController extends Controller
     {
         return view('admin.category.categories', [
             'title' => 'My Category',
-            'categories' => Category::all(),
+            'categories' => Category::orderBy('id', 'desc')->paginate(10),
         ]);
     }
 

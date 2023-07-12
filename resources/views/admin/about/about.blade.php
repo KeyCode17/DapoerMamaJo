@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 @section('admincontent')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-        <h1 class="h2">About</h1>
+        <h1 class="h2">Welcome back, Admin</h1>
     </div>
     <div class="table-responsive col-lg-8 mb-5">
         @if (session()->has('success'))
@@ -9,7 +9,8 @@
                 {{ session('success') }}
             </div>
         @endif
-        <a href="/dashboard/about/create" class="btn btn-danger mb-3" onclick="return confirm('Are You Sure ?')">Reset About</a>
+        <a href="/dashboard/about/create" class="btn btn-danger mb-3" onclick="return confirm('Are You Sure ?')">Reset
+            About</a>
         <table class="table table-striped table-sm col-lg-8 col-md-6 col-sm-4">
             <thead>
                 <tr>

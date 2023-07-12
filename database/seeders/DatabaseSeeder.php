@@ -50,6 +50,14 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::create([
+        'category_id' => 2,
+        'title' => "Paket Lebaran 1",
+        'slug' => "paket-lebaran",
+        'image' => "public/posts/image3.png",
+        'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        ]);
+        
+        Post::create([
             'category_id' => 3,
             'title' => "Tumpeng Nasi Kuning",
             'slug' => "tumpeng-nasi-kuning",
@@ -65,21 +73,54 @@ class DatabaseSeeder extends Seeder
         'body'=> "<div>Soto Banjar dengan racikan <strong>Dapoer Mama Jo </strong>merupakan hidangan yang menggugah selera dan memanjakan lidah. Soto Banjar adalah hidangan khas dari Banjarmasin yang terkenal dengan kuahnya yang kaya dan racikan rempah yang lezat. <strong>Dapoer Mama Jo</strong> menghadirkan Soto Banjar dengan racikan yang autentik dan membuatnya begitu nikmat.<br><br>Salah satu keistimewaan Soto Banjar dengan racikan <strong>Dapoer Mama Jo</strong> adalah kuahnya yang kaya dan gurih. Racikan rempah-rempah seperti serai, jahe, lengkuas, dan kunyit memberikan aroma dan rasa yang khas pada kuah kaldu. Setiap suapan Soto Banjar ini akan membawa Anda merasakan kelezatan racikan rempah yang memenuhi seluruh kuahnya.<br><br>Selain itu, <strong>Dapoer Mama Jo</strong> mengolah daging sapi dengan racikan yang sempurna. Daging sapi yang dimasak dengan baik memiliki tekstur yang empuk dan rasa yang meresap hingga ke dalam setiap seratnya. Ditambah dengan mie kuning, tauge, daun seledri, dan bawang goreng sebagai bahan pelengkap, Soto Banjar dengan racikan <strong>Dapoer Mama Jo</strong> menciptakan harmoni rasa yang sempurna dalam setiap suapannya.<br><br>Dapoer Mama Jo menyajikan Soto Banjar menghadirkan cita rasa yang autentik dan menggugah selera. Nikmatnya Soto Banjar dengan racikan <strong>Dapoer Mama Jo</strong> terletak pada perpaduan sempurna antara kuah yang kaya rempah, racikan rempah yang lezat, dan daging sapi yang empuk. Setiap hidangan Soto Banjar ini akan memanjakan lidah Anda dan memberikan pengalaman kuliner yang tak terlupakan.</div>",
         ]);
 
-        Post::create([
-        'category_id' => 2,
-        'title' => "Paket Lebaran",
-        'slug' => "paket-lebaran",
-        'image' => "public/posts/image3.png",
-        'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
-        ]);
 
         Post::create([
             'category_id' => 2,
-            'title' => "Paket Lebaran",
+            'title' => "Paket Lebaran 2",
             'slug' => "paket-lebaran-2",
             'image' => "public/posts/image4.png",
             'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
         ]);
+
+        // Post::create([
+        //     'category_id' => 2,
+        //     'title' => "Paket Lebaran 3",
+        //     'slug' => "paket-lebaran-3",
+        //     'image' => "public/posts/image4.png",
+        //     'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        // ]);
+
+        // Post::create([
+        //     'category_id' => 2,
+        //     'title' => "Paket Lebaran 4",
+        //     'slug' => "paket-lebaran-4",
+        //     'image' => "public/posts/image4.png",
+        //     'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        // ]);
+
+        // Post::create([
+        //     'category_id' => 2,
+        //     'title' => "Paket Lebaran 5",
+        //     'slug' => "paket-lebaran-5",
+        //     'image' => "public/posts/image4.png",
+        //     'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        // ]);
+
+        // Post::create([
+        //     'category_id' => 2,
+        //     'title' => "Paket Lebaran 6",
+        //     'slug' => "paket-lebaran-6",
+        //     'image' => "public/posts/image4.png",
+        //     'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        // ]);
+
+        // Post::create([
+        //     'category_id' => 2,
+        //     'title' => "Paket Lebaran 7",
+        //     'slug' => "paket-lebaran-7",
+        //     'image' => "public/posts/image4.png",
+        //     'body' => "<div>Dapoer Mama Jo dengan bangga menyediakan paket Lebaran yang istimewa bagi pelanggan kami. Paket Lebaran kami dirancang khusus untuk memenuhi kebutuhan makanan selama momen Lebaran dengan cita rasa yang lezat dan pilihan menu yang beragam.<br><br></div><div><br>Paket Lebaran dari Dapoer Mama Jo mencakup berbagai hidangan lezat yang siap disajikan untuk keluarga dan kerabat Anda. Kami menawarkan pilihan menu yang beragam, termasuk hidangan khas seperti nasi kotak, tumpeng, lauk-pauk spesial, makanan ringan, dan hidangan penutup yang menggugah selera.<br><br></div><div><br>Setiap hidangan dalam paket Lebaran kami disiapkan dengan racikan bumbu rempah yang khas dan menggunakan bahan-bahan berkualitas tinggi. Kami memastikan bahwa semua hidangan yang kami sediakan bebas dari MSG (Monosodium Glutamate) dan sesuai dengan standar kehalalan.<br><br></div><div><br>Dengan memesan paket Lebaran dari Dapoer Mama Jo, Anda dapat memanjakan keluarga dan kerabat Anda dengan hidangan yang lezat dan berkualitas tinggi tanpa harus repot memasak sendiri. Kami menyediakan paket yang dapat disesuaikan dengan kebutuhan dan jumlah tamu, sehingga Anda dapat merayakan momen Lebaran dengan nyaman dan berkesan.<br><br></div>",
+        // ]);
 
         Picture::create([
             'image' => "public/posts/image1.png",

@@ -1,25 +1,43 @@
 @extends('layouts.main')
-@section('custom_title')
-    {{ $about['title'] }}
-@endsection
-@section('content')
-    <section id="hero" class="background-image" data-background="{{ Storage::url($about->index) }}"
-        style="background-image: url({{ Storage::url($about->index) }})">
-        <div class="opacity-mask" data-opacity-mask="rgb(85, 88, 93, 0)" style="background-color: rgba(85, 88, 93, 0);">
-            <div class="intro_title error"><img style="width:10%" class="" src="{{ Storage::url($about->icon) }}"
-                    alt="Dapoer Mama Jo">
-            </div>
-        </div>
-    </section>
-    <div class="mx-5 row gx-0 mb-5 mb-lg-0 justify-content-center">
-        <div class="col-lg-10  col-md-9 col-sm-8">
-            <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-lg-left">
-                    <h4 class="ms-2 h3">{{ $about->title }}</h4>
-                    <div class="mx-3 mb-0 px-3 h6">{!! $about->body !!}</div>
-                    <a href="/" class="btn btn-primary mt-3 py-3 px-5 ms-4">Back</a>
+
+@section('contents')
+<div class="footer-bg">
+    ㅤ
+    <div class="footer-bg">
+        ㅤ
+        <div class="footer-bg">
+            ㅤ
+            <div class="footer-bg">
+                ㅤ
+                <div class="footer-bg">
+                    ㅤ
                 </div>
             </div>
         </div>
     </div>
+</div>
+    <!-- single_about_area_start -->
+    <div class="single_about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="single_about_text">
+                        <h3>About Us</h3>
+                        {!! $about->body !!}
+                        <div class="button rounded-0 primary-bg text-white btn_1 boxed-btn mt-4 ml-3" data-toggle="modal" data-target="#exampleModal">
+                            <div class="custom_order">
+                                <a href="javascript:void(0);" >Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1">
+                    <div class="single_about_thumb thumb_n1">
+                        <img src="{{ Storage::url($about->index) }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- single_about_area_end -->
 @endsection

@@ -2,22 +2,32 @@
 @section('custom_title')
     {{ $post['title'] }}
 @endsection
-@section('content')
-    <section id="hero" class="background-image col-7" data-background="{{ Storage::url($post->image) }}"
-        style="background-image: url({{ Storage::url($post->image) }})">
-    </section>
-    <div class="mx-5 row gx-0 mb-5 mb-lg-0 justify-content-center">
-        <div class="col-lg-10  col-md-9 col-sm-8">
-            <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-lg-left">
-                    <h4 class="ms-2 h3">{{ $post->title }}</h4>
-                    <h6 class="ms-2 h4">Dalam kategori
-                        <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
-                    </h6>
-                    <div class="mx-3 mb-0 px-3 h6">{!! $post->body !!}</div>
-                    <a href="/" class="btn btn-primary mt-3 py-3 px-5 ms-4">Back</a>
+@section('contents')
+    <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section-padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 posts-list">
+             <div class="single-post">
+                <div class="feature-img">
+                   <img class="img-fluid rounded" src="{{ Storage::url($post->image) }}" alt="">
                 </div>
-            </div>
-        </div>
+                <div class="blog_details">
+                   <h2>
+                    {{ $post->title }}
+                   </h2>
+                   <ul class="blog-info-link mt-3 mb-4">
+                      <li>Kategori</li>
+                      <li><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
+                   </ul>
+                   {!! $post->body !!}
+                </div>
+                <button class="button rounded-0 primary-bg text-white btn_1 boxed-btn mt-3 ml-3"
+                                    type="button" onclick="window.location.href='/categories/{{ $post->category->slug }}'">Back</button>
+             </div>
+          </div>
+       </div>
     </div>
+ </section>
+ <!--================ Blog Area end =================-->
 @endsection

@@ -18,3 +18,28 @@
         </div>
     </div>
 @endsection
+@section('contents')
+    <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section-padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 posts-list">
+             <div class="single-post">
+                <div class="feature-img">
+                   <img class="img-fluid rounded" src="{{ Storage::url($image) }}" alt="">
+                </div>
+                <div class="blog_details">
+                   <h2>
+                    {{ $title }}
+                   </h2>
+                   {!! $body !!}
+                </div>
+                <button class="button rounded-0 primary-bg text-white btn_1 boxed-btn mt-3 ml-3"
+                                    type="button" onclick="window.location.href='/promos/'">Back</button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--================ Blog Area end =================-->
+@endsection

@@ -20,7 +20,7 @@ class DashboardPromoController extends Controller
     {
         return view('admin.promo.posts', [
             'title' => 'My Posts',
-            'promos' => Promo::all(),
+            'promos' => Promo::orderBy('id', 'desc')->paginate(5)
         ]);
     }
 

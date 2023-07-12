@@ -1,154 +1,123 @@
 @extends('layouts.main')
-@section('styles')
-    <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
 
-        .swiper {
-            width: 90%;
-            height: 39vw;
-        }
-
-        .index1ph {
-            width: 100%;
-            height: 39vw;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 80vw;
-            height: 100vw;
-            object-fit: cover;
-        }
-
-        .swiper-slide img.difference {
-            width: 100%;
-            height: 150%;
-        }
-
-        .swiper {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .swiper-button-next:after {
-            font-size: 6vw;
-            color: #113199;
-        }
-
-        .swiper-button-prev:after {
-            font-size: 6vw;
-            color: #113199;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #113199;
-        }
-
-        a:link {
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #708C9B;
-            text-decoration: underline;
-        }
-    </style>
-@endsection
-@section('content')
-    <section id="hero" class="background-image" data-background="{{ Storage::url($about->index) }}"
-        style="background-image: url({{ Storage::url($about->index) }})">
-        <div class="opacity-mask" data-opacity-mask="rgb(85, 88, 93, 0)" style="background-color: rgba(85, 88, 93, 0);">
-            <div class="intro_title error"><img style="width:10%" class="" src="{{ Storage::url($about->icon) }}"
-                    alt="Dapoer Mama Jo">
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container margin_60">
-
-            <div class="main_title">
-                <h2>Kenapa <span>Harus</span> Kami?</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="feature_home">
-                        <i class="bi bi-calendar-check"></i>
-                        <h3><span>10 Tahun</span> Melayani</h3>
-                        <p>
-                            Telah melayani dengan kepercayaan selama lebih dari 10 tahun, menjadikan kami pilihan yang dapat
-                            dipercaya.
-                        </p>
-                        <a href="#" class="btn_1 outline">Read more</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="feature_home">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <h3><span>Juru Masak</span> Berpengalaman</h3>
-                        <p>
-                            Juru masak berpengalaman kami untuk hidangan berkualitas tinggi. Kelezatan dan keahlian dalam
-                            setiap sajian.
-                        </p>
-                        <a href="#" class="btn_1 outline">Read more</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="feature_home">
-                        <i class="bi bi-cash"></i>
-                        <h3><span>Harga </span>Terjangkau</h3>
-                        <p>
-                            Menawarkan harga terjangkau tanpa mengorbankan kualitas dan kelezatan pada setiap hidangan.
-                        </p>
-                        <a href="#" class="btn_1 outline">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <!--End row -->
-        </div>
-    </section>
-    @foreach ($posts as $index => $post)
-        <div class="mx-5 row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-5 col-md-4 col-sm-2"><img class="img-fluid" src="{{ Storage::url($post->image) }}" alt="..." /></div>
-            <div class="col-lg-5 col-md-4 col-sm-2 {{ $index % 2 == 0 ? 'order-lg-last' : 'order-lg-first' }}">
-                <div class="text-center h-100 project" style="background-color:#55585d">
-                    <div class="d-flex h-100">
-                        <div
-                            class="project-text w-100 my-auto text-center {{ $index % 2 == 0 ? 'text-lg-right' : 'text-lg-left' }}">
-                            <h4 class="text-white h3"><a href="/post/{{ $post->slug }}">{{ $post->title }}</a></h4>
-                            <h6 class="text-white h4"><a
-                                    href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></h6>
-                            <div class="mx-3 mb-0 text-white-50 text-truncate px-3 h6">{!! strip_tags($post->body) !!}</div>
+@section('contents')
+    <div class="video_area slider_img_1 zigzag_bg_2 ">
+        <div class="video_area_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="video_text">
+                            <div class="info">
+                                <div class="info_inner">
+                                    <h4>Where The Food</h4>
+                                    <p>Taste Like Home</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    @endforeach
-    <div class="swiper mySwiper mt-5 mb-3">
-        <div class="swiper-wrapper">
-            @foreach ($pictures as $picture)
-                <div class="swiper-slide">
-                    <img src="{{ Storage::url($picture->image) }}" alt="Picture">
-                </div>
-            @endforeach
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
     </div>
+    <!-- Kenapa Harus Kami -->
+    <div class="service_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-60">
+                        <h3>Kenapa Harus Kami ?</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6">
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <i class="flaticon-calendar"></i>
+                        </div>
+                        <h4>±10 Tahun Pelayanan</h4>
+                        <p>
+                            Telah melayani selama lebih dari 10 tahun, menjadikan kami pilihan yang dapat dipercaya.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <i class="flaticon-businessman"></i>
+                        </div>
+                        <h4>Koki Berpengalaman</h4>
+                        <p>
+                            Koki kami yang berpengalaman untuk hidangan berkualitas tinggi. Kelezatan dan keahlian dalam
+                            setiap sajian.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <i class="flaticon-dance"></i>
+                        </div>
+                        <h4>Harga Terjangkau</h4>
+                        <p>
+                            Menawarkan harga terjangkau tanpa mengorbankan kualitas dan kelezatan pada setiap hidangan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service_area-end -->
+
+    <!-- video_area_start -->
+    <div class="video_area video_bg zigzag_bg_1 zigzag_bg_2 ">
+        <div class="video_area_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="video_text">
+                            <div class="info">
+                                <div class="info_inner">
+                                    <h4>Soto Banjar</h4>
+                                    <p>By <strong>Dapoer Mama Jo</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- video_area_end -->
+
+    <!-- order_area_start -->
+    <div class="order_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-70">
+                        <h3>Post Terbaru</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($posts as $index => $post)
+                    <div class="col-xl-4 col-md-6">
+                        <div class="single_order h-100 d-flex flex-column">
+                            <div class="order_thumb mb-auto mt-auto align-items-center">
+                                <img src="{{ Storage::url($post->image) }}" class="rounded" alt="">
+                            </div>
+                            <div class="order_info mt-auto">
+                                <h3><a href="">{{ $post->title }}</a></h3>
+                                <h5><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></h5>
+                                <p class="text-truncate">{!! strip_tags($post->body) !!}</p>
+                                <a href="/post/{{ $post->slug }}" class="boxed_btn mb-4">Read More!</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <!-- order_area_end -->
 @endsection

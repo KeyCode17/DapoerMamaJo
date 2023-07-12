@@ -19,7 +19,7 @@ class DashboardPostController extends Controller
     {
         return view('admin.posts.posts', [
             'title' => 'My Posts',
-            'posts' => Post::with(['category'])->get(),
+            'posts' => Post::with(['category'])->orderBy('id', 'desc')->paginate(5),
         ]);
     }
 

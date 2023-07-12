@@ -21,19 +21,10 @@
             @method('put')
             @csrf
             <div class="mb-3">
-                <label for="icon" class="form-label">Icon</label>
-                <input type="hidden" name="oldIcon" value="{{ $about->icon }}">
-                <img src="{{ Storage::url($about->icon) }}" class="d-block icon-preview img-fluid mb-3 col-sm-3 col-md-4 col-lg-5">
-                <input class="form-control @error('icon') is-invalid @enderror" name="icon" type="file"
-                    id="icon" onchange="previewIcon()">
-                @error('icon')
-                    <p class="text-danger">
-                        {{ $message }}
-                    </p>
-                @enderror
+                <input type="hidden" name="oldIcon" value="{{ $about->icon }}" readonly>
             </div>
             <div class="mb-3">
-                <label for="index" class="form-label">Background</label>
+                <label for="index" class="form-label">Image</label>
                 <input type="hidden" name="oldIndex" value="{{ $about->index }}">
                 <img src="{{ Storage::url($about->index) }}" class="d-block index-preview img-fluid mb-3 col-sm-3 col-md-4 col-lg-5">
                 <input class="form-control @error('index') is-invalid @enderror" name="index" type="file"

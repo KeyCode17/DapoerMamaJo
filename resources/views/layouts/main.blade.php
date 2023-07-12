@@ -1,59 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ $title }}@yield('custom_title')</title>
-    {{-- Important --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/1style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/vendors.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{-- Style Add On --}}
-    <style>
-        body {
-            background: #f4f5f7;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            color: #113199;
-        }
-    </style>
-    @yield('styles')
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+	@yield('styles')
 </head>
 
 <body>
-    @include('layouts.partials.navbar')
-    @yield('content')
-    <script src="{{ asset('js/jquery-3.6.4.min.js') }}"></script>
-    <script src="{{ asset('js/common_scripts_min.js') }}"></script>
-    <script src="{{ asset('js/functions.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-    </script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    @include('layouts.partials.header')
+	
+	
+	@yield('contents')
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+	@include('layouts.partials.footer')
+
+    <!-- JS here -->
+	@yield('js')
+
+    <script src="{{ asset('js/vendor/modernizr-3.5.0.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/ajax-form.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/scrollIt.js') }}"></script>
+    <script src="{{ asset('js/scrollIt.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/nice-select.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+
+    <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.form.js') }}"></script>
+    <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('js/mail-script.js') }}"></script>
+
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
-@include('layouts.partials.footer')
 
 </html>

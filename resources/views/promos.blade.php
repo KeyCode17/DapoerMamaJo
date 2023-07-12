@@ -1,24 +1,43 @@
 @extends('layouts.main')
 
-
-@section('content')
-<h1 class="mt-5">Promo!</h1>
-    @foreach ($promos as $promo)
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ Storage::url($promo->image) }}" alt="">
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <h1 class="display-6">{{ $promo->title }}</h1>
-                        </div>
-                        <p class="text-truncate">{{ strip_tags($promo->body) }}</p>
-                        <a href="/promos/{{ $promo->slug }}" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
-                    </div>
+@section('contents')
+<div class="footer-bg">
+    ㅤ
+    <div class="footer-bg">
+        ㅤ
+        <div class="footer-bg">
+            ㅤ
+            <div class="footer-bg">
+                ㅤ
+                <div class="footer-bg">
+                    ㅤ
                 </div>
             </div>
         </div>
-    @endforeach
+    </div>
+</div>
+    <!--================Blog Area =================-->
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                @foreach ($promos as $promo)
+                    <article class="blog_item col-lg-6 mb-5 mb-lg-5">
+                        <div class="blog_item_img">
+                            <img class="card-img rounded" src="{{ Storage::url($promo->image) }}" alt="">
+                            <a href="/post/{{ $promo->slug }}" class="blog_item_date">
+                                <h3>{{ $promo->title }}</h3>
+                            </a>
+                        </div>
+                        <div class="blog_details">
+                            <p class="text-truncate">{{ strip_tags($promo->body) }}</p>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+        <div class="ml-5">
+            {{ $promos->links() }}
+        </div>
+    </section>
+    <!--================Blog Area =================-->
 @endsection

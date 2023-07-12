@@ -2,12 +2,6 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
-                    <span data-feather="home"></span>
-                    Dashboard <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}" href="/dashboard/about/about">
                     <span data-feather="book"></span>
                     About

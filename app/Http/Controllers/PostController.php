@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {   
         Artisan::call('storage:link');
-        return view('home', [
+        return view('home1', [
             'title' => 'Home',
             'posts' => Post::with('category')->orderBy('id', 'desc')->take(3)->get(),
             'pictures' => Picture::all(),

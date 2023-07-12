@@ -7,12 +7,14 @@ use App\Http\Controllers\PostController;
 use App\Models\About;
 use App\Models\Contacts;
 use App\Models\Category;
+use App\Models\Picture;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardAboutController;
 use App\Http\Controllers\DashboardPromoController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
 /*
@@ -29,9 +31,9 @@ Route::get('/foo', function () {
     Artisan::call('storage:link');
 });
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/home1', [PostController::class, 'index']);
 
-Route::post('/', [PostController::class, 'order']);
+Route::post('/home1', [PostController::class, 'order']);
 
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
 
@@ -46,12 +48,13 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/categories/{category:slug}', function (Category $category) {
     return view('category', [
         'title' => $category->name,
-        'posts' => $category->posts,
+        'posts' => $category->posts()->orderBy('id', 'desc')->paginate(6),
         'category' => $category->name,
         'categories' => Category::all(),
-        'pictures' => $category->image
+        'pictures' => $category->posts()->orderBy('id', 'desc')->paginate(6)->pluck('image')
     ]);
 });
+
 
 Route::get('/categories', function () {
     return view('categories', [
@@ -71,8 +74,8 @@ Route::get('/promos/{promo:slug}', function (Promo $promo) {
 
 Route::get('/promos', function () {
     return view('promos', [
-        'title' => 'Categories',
-        'promos' => Promo::all(),
+        'title' => 'promos',
+        'promos' => Promo::orderBy('id', 'desc')->paginate(5),
         'categories' => Category::all()
     ]);
 });
@@ -85,16 +88,33 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard',[
-        'title'=>'Dashboard'
+Route::get('/', function () {
+    return view('home',[
+        'title' => 'Home',
+        'posts' => Post::with('category')->orderBy('id', 'desc')->take(3)->get(),
+        'pictures' => Picture::all(),
+        'categories' => Category::all()
     ]);
+});
+
+Route::post('/', function (Request $request) {
+    $Data = $request->validate([
+        'nama' => 'required|max:255',
+        'kontak' => 'required|max:20'
+    ]);
+
+    Contacts::Create($Data);
+    return redirect('/')->with('success', 'Terima kasih telah memesan, Mohon tunggu informasi dari kami');
+});
+
+Route::get('/dashboard', function () {
+    return redirect('/dashboard/about/about');
 })->middleware('auth');
 
 Route::get('/dashboard/contacts', function () {
     return view('admin.contacts.contacts', [
         'title' => 'My Posts',
-        'contacts' => Contacts::all(),
+        'contacts' => Contacts::paginate(10),
     ]);
 })->middleware('auth');
 

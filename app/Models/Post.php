@@ -22,7 +22,7 @@ class Post extends Model
     {
         return $this->belongsTo(category::class);
     }
-
+    
     public function getRouteKeyName()
     {
         return 'slug';
