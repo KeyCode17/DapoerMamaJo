@@ -39,14 +39,20 @@ Berikut adalah langkah-langkah untuk menginstal proyek setelah Anda mengklonnya 
    ```bash
    php artisan migrate:fresh --seed
    ```
+   
+8. Jalankan penhubungan penyimpanan dengan public
 
-8. Jalankan server pengembangan Laravel:
+   ```bash
+   php artisan storage:link
+   ```
+   
+10. Jalankan server pengembangan Laravel:
 
    ```bash
    php artisan serve
    ```
 
-9. Buka browser dan akses proyek Laravel di URL berikut: `http://127.0.0.1:8000`
+11. Buka browser dan akses proyek Laravel di URL berikut: `http://127.0.0.1:8000`
 
 ## Login Dashboard Default
 User: admin
