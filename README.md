@@ -46,14 +46,14 @@ Berikut adalah langkah-langkah untuk menginstal proyek setelah Anda mengklonnya 
    php artisan storage:link
    ```
    
-10. Jalankan server pengembangan Laravel:
+9. Jalankan server pengembangan Laravel:
 
    ```bash
    php artisan serve
    ```
 
-11. Buka browser dan akses proyek Laravel di URL berikut: `http://127.0.0.1:8000`
+10. Buka browser dan akses proyek Laravel di URL berikut: `http://127.0.0.1:8000`
 
 ## Login Dashboard Default
-User: admin
+User: admin<br>
 Password: root
