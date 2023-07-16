@@ -27,9 +27,6 @@ use Illuminate\Support\Facades\Artisan;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/foo', function () {
-    Artisan::call('storage:link');
-});
 
 Route::get('/home1', [PostController::class, 'index']);
 
@@ -89,6 +86,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/', function () {
+    Artisan::call('storage:link');
     return view('home',[
         'title' => 'Home',
         'posts' => Post::with('category')->orderBy('id', 'desc')->take(3)->get(),
