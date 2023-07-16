@@ -113,6 +113,7 @@ class DashboardAboutController extends Controller
                 Storage::delete($request->oldIndex);
             }
             $Data['index'] = $request->file('index')->store('public/index');
+
             Artisan::call('storage:link');
         }
 

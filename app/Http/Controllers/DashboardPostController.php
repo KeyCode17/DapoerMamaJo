@@ -100,7 +100,7 @@ class DashboardPostController extends Controller
         if ($request->file('image') != '') {
             Storage::delete($request->oldImage);
             $Data['image'] = $request->file('image')->store('public/posts');
-            $imageData = ['image' => $request->file('image')->store('public/posts')];
+            $imageData = ['image' => $Data['image']];
             Picture::where('id', $post->id)->update($imageData);
             Artisan::call('storage:link');
         }
